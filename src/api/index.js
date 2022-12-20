@@ -1,6 +1,7 @@
 import axios from "axios"
 
-const API = axios.create({baseURL: "http://localhost:5000"})
+// const API = axios.create({baseURL: "http://localhost:5000"})
+const API = axios.create({baseURL: "https://jsmmernfullstackback.onrender.com"})
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem("profile")) {
@@ -9,8 +10,6 @@ API.interceptors.request.use((req) => {
 
     return req
 })
-
-const url = "http://localhost:5000/posts"
 
 export const fetchPost = (id) => API.get(`/posts/${id}`)
 export const fetchPosts = (page) => API.get(`/posts?page=${page}`)
