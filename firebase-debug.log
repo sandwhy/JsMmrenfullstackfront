@@ -1,0 +1,108 @@
+[debug] [2022-12-20T09:37:48.288Z] ----------------------------------------------------------------------
+[debug] [2022-12-20T09:37:48.290Z] Command:       C:\Users\rober\OneDrive\Desktop\firebase-tools-instant-win.exe C:\Users\rober\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase deploy
+[debug] [2022-12-20T09:37:48.290Z] CLI Version:   11.19.0
+[debug] [2022-12-20T09:37:48.290Z] Platform:      win32
+[debug] [2022-12-20T09:37:48.290Z] Node Version:  v16.16.0
+[debug] [2022-12-20T09:37:48.291Z] Time:          Tue Dec 20 2022 16:37:48 GMT+0700 (Western Indonesia Time)
+[debug] [2022-12-20T09:37:48.291Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-20T09:37:48.349Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-20T09:37:48.350Z] > authorizing via signed-in user (sandwhen@gmail.com)
+[debug] [2022-12-20T09:37:48.350Z] [iam] checking project jsmfullstackbackend for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-20T09:37:48.352Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/jsmfullstackbackend:testIamPermissions [none]
+[debug] [2022-12-20T09:37:48.352Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/jsmfullstackbackend:testIamPermissions x-goog-quota-user=projects/jsmfullstackbackend
+[debug] [2022-12-20T09:37:48.352Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jsmfullstackbackend:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-20T09:37:49.432Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/jsmfullstackbackend:testIamPermissions 200
+[debug] [2022-12-20T09:37:49.433Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jsmfullstackbackend:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-20T09:37:49.433Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/jsmfullstackbackend [none]
+[debug] [2022-12-20T09:37:49.789Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/jsmfullstackbackend 200
+[debug] [2022-12-20T09:37:49.789Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/jsmfullstackbackend {"projectId":"jsmfullstackbackend","projectNumber":"58532950357","displayName":"JsMfullstackbackend","name":"projects/jsmfullstackbackend","resources":{"hostingSite":"jsmfullstackbackend"},"state":"ACTIVE","etag":"1_212eb215-1313-4a32-b4f9-94a5beb20911"}
+[info] 
+[info] === Deploying to 'jsmfullstackbackend'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-12-20T09:37:49.793Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jsmfullstackbackend/versions [none]
+[debug] [2022-12-20T09:37:49.793Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jsmfullstackbackend/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-20T09:37:51.117Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jsmfullstackbackend/versions 200
+[debug] [2022-12-20T09:37:51.118Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jsmfullstackbackend/versions {"name":"projects/58532950357/sites/jsmfullstackbackend/versions/e6be06c035b595df","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[jsmfullstackbackend]: beginning deploy... 
+[info] i  hosting[jsmfullstackbackend]: found 22 files in build 
+[debug] [2022-12-20T09:37:51.126Z] [hosting] uploading with 200 concurrency
+[debug] [2022-12-20T09:37:51.131Z] [hosting] hash cache [YnVpbGQ] stored for 22 files
+[debug] [2022-12-20T09:37:51.131Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":1,"active":0,"complete":22,"success":22,"errored":0,"retried":0,"total":22,"elapsed":3}
+[debug] [2022-12-20T09:37:51.131Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/58532950357/sites/jsmfullstackbackend/versions/e6be06c035b595df:populateFiles [none]
+[debug] [2022-12-20T09:37:51.131Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/58532950357/sites/jsmfullstackbackend/versions/e6be06c035b595df:populateFiles {"files":{"/asset-manifest.json":"5583de2739fb47b9fe1d1801daafb433d4ca8f2d9b978a3118eea7eeddf05798","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/index.html":"55d23bbb87d4c38f56c09f2423689e954424e031a414620a72a1986ea5792db6","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/precache-manifest.778039d6643e7b4b9ad22e9ccd5ca032.js":"3e70b2631f020bf8fe9438da0cb20eb32361c50e4a6e28048278740d1d9d9095","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/service-worker.js":"3b7f5909abd0ecf200f9fc42ed79690829debef884095d7e6f8e12ebfd2b4ebf","/static/css/main.bcedd86b.chunk.css":"f95e050513e1987b48b80573f8f0cd76c0341ecd3f25d8833d8bdb0a3f0274ef","/static/css/main.bcedd86b.chunk.css.map":"b63c1bbe0a46ba7cfb93cb01753769cd3a8266ec2cc3c3d647fe3ea9793c874d","/static/js/2.1719556a.chunk.js":"2a2a43f32d6d837f54295d50686d0b7d041da293afdb61e82c340f6eee6e43d7","/static/js/2.1719556a.chunk.js.LICENSE.txt":"d82d7442bc63d18a6be837aa9023c15eec5677129d198971e6cecf7cadd9acc0","/static/js/2.1719556a.chunk.js.map":"76c6c9b4318dbc48b882573fe299b57124b679daab8bd65d5d46429a7a46f4c1","/static/js/main.3bca2934.chunk.js":"b8aad1133c7beaf36e9c2db7a59341805f19127f825c5cbe1f91c2e0914cb936","/static/js/main.3bca2934.chunk.js.LICENSE.txt":"5d7e5b57938d46394ba5efca4f472d79b7221bc643cee649c4c4671e02100914","/static/js/main.3bca2934.chunk.js.map":"e9dfc1524e00937a9129a1dccab71a82275004c32a0a58b9cd9085467a94679e","/static/js/runtime-main.81534a39.js":"a2d04dc0c519e8f5d3aae0503191b3b50cc9dd10c31b8676f1687cc524207a46","/static/js/runtime-main.81534a39.js.map":"9994387ddfacc1ccc63f6228d08c6ff06dfe3899730f3406ddb3cc62a4b94a00","/static/media/memories-Logo.8e9763ff.png":"65737d1fde2cc8fc8709ea2f59da9519c80caccd2fd8e58f926a65eeac1d7bc3","/static/media/memories-Text.6c7b5ec0.png":"20b00df9056022b185cbc52327b5d030c205c203b88031f5fc5774cb2c39d92b","/static/media/memories.5c0c63fb.png":"aefddd5af76c1aad63d4afc8e5ebf91395ad399e37edbbfd4591097ad932d0e7"}}
+[debug] [2022-12-20T09:37:51.958Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/58532950357/sites/jsmfullstackbackend/versions/e6be06c035b595df:populateFiles 200
+[debug] [2022-12-20T09:37:51.958Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/58532950357/sites/jsmfullstackbackend/versions/e6be06c035b595df:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/jsmfullstackbackend/versions/e6be06c035b595df/files"}
+[debug] [2022-12-20T09:37:51.958Z] [hosting][populate queue][FINAL] {"max":828,"min":828,"avg":828,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":828}
+[debug] [2022-12-20T09:37:51.958Z] [hosting] uploads queued: 0
+[debug] [2022-12-20T09:37:51.958Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1671529071958}
+[info] +  hosting[jsmfullstackbackend]: file upload complete 
+[debug] [2022-12-20T09:37:51.959Z] [hosting] deploy completed after 840ms
+[debug] [2022-12-20T09:37:51.960Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "jsmfullstackbackend"
+    },
+    "version": "projects/58532950357/sites/jsmfullstackbackend/versions/e6be06c035b595df"
+  }
+]
+[info] i  hosting[jsmfullstackbackend]: finalizing version... 
+[debug] [2022-12-20T09:37:51.962Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jsmfullstackbackend/versions/e6be06c035b595df updateMask=status%2Cconfig
+[debug] [2022-12-20T09:37:51.962Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/jsmfullstackbackend/versions/e6be06c035b595df {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-12-20T09:37:59.382Z] ----------------------------------------------------------------------
+[debug] [2022-12-20T09:37:59.384Z] Command:       C:\Users\rober\OneDrive\Desktop\firebase-tools-instant-win.exe C:\Users\rober\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase init
+[debug] [2022-12-20T09:37:59.384Z] CLI Version:   11.19.0
+[debug] [2022-12-20T09:37:59.384Z] Platform:      win32
+[debug] [2022-12-20T09:37:59.384Z] Node Version:  v16.16.0
+[debug] [2022-12-20T09:37:59.385Z] Time:          Tue Dec 20 2022 16:37:59 GMT+0700 (Western Indonesia Time)
+[debug] [2022-12-20T09:37:59.385Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-20T09:37:59.439Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-20T09:37:59.440Z] > authorizing via signed-in user (sandwhen@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\rober\OneDrive\Desktop\JsM Mern Full Stack\client
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-12-20T09:38:09.784Z] Using project from CLI flag: jsmfullstackbackend
+[debug] [2022-12-20T09:38:09.786Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/jsmfullstackbackend [none]
+[debug] [2022-12-20T09:38:10.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/jsmfullstackbackend 200
+[debug] [2022-12-20T09:38:10.141Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/jsmfullstackbackend {"projectId":"jsmfullstackbackend","projectNumber":"58532950357","displayName":"JsMfullstackbackend","name":"projects/jsmfullstackbackend","resources":{"hostingSite":"jsmfullstackbackend"},"state":"ACTIVE","etag":"1_212eb215-1313-4a32-b4f9-94a5beb20911"}
+[info] i  Using project jsmfullstackbackend (JsMfullstackbackend) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
